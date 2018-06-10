@@ -16,7 +16,7 @@
  *************************************************
  	1 - GENERALITES
  	2 - HEADER
- 	3 - 
+ 	3 - BANDEAU
  *************************************************
  */
 
@@ -104,3 +104,29 @@ body{
 	color: $brun;
 }
 
+.header-menu a:hover{
+	color: $vert_fonce;
+	text-decoration: none;
+}
+
+/*
+ *************************************************
+ 	3 - BANDEAU
+ *************************************************
+ */
+
+.bandeau{
+	position: relative;
+}
+
+.triangle{
+	width: 80px;
+	height: 40px;
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	left: calc(50% - 40px);
+	border-top: solid 30px #fff;
+	border-left: solid 40px transparent;
+	border-right: solid 40px transparent;
+}
