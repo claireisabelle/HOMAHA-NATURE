@@ -89,7 +89,8 @@ body {
  *************************************************
  */
 .bandeau {
-  position: relative; }
+  position: relative;
+  z-index: 1; }
 
 .triangle {
   width: 80px;
@@ -101,5 +102,14 @@ body {
   border-top: solid 30px #fff;
   border-left: solid 40px transparent;
   border-right: solid 40px transparent; }
+
+.bandeau-encart {
+  position: relative;
+  width: 100%;
+  min-height: 60px;
+  background-color: #a58c6e;
+  margin-top: -30px;
+  margin-bottom: 20px;
+  z-index: 10; }
 
 /*# sourceMappingURL=style.css.map */

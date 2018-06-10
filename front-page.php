@@ -75,6 +75,14 @@
 </div>
 <!-- /.bandeau -->
 
+<div class="container">
+	<div class="bandeau-encart">
+		
+	</div>
+	<!-- /.bandeau-encart -->
+</div>
+<!-- /.container -->
+
 
 
 
