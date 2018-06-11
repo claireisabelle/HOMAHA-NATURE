@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Document</title>
+	<title>H'Omaha Nature</title>
 <?php wp_head();  ?>
 </head>
 
@@ -33,15 +33,47 @@
 	<!-- /.header-logo -->
 
 	<div class="header-menu">
-		<nav>
-			<ul>
-				<li><a href="">Gîte</a></li>
-				<li><a href="">Activités</a></li>
-				<li><a href="">A proximité</a></li>
-				<li><a href="">Tarifs</a></li>
-				<li><a href="">Réservations</a></li>
-			</ul>
+
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<?php
+				wp_nav_menu( array(
+					'theme_location'    => 'primary',
+					'depth'             => 2,
+					'container'         => 'div',
+					'container_class'   => 'collapse navbar-collapse',
+					'container_id'      => 'navbarSupportedContent',
+					'menu_class'        => 'navbar-nav',
+					'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+					'walker'            => new WP_Bootstrap_Navwalker()
+				) );
+			?>
+
+<!-- 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+					<li>
+						<a class="nav-link" href="#">Gîte</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#">Activités</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#">A Proximité</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#">Tarifs</a>
+					</li>
+					<li>
+						<a class="nav-link" href="#">Réservations</a>
+					</li>
+
+				</ul>
+			</div> -->
 		</nav>
+
 	</div>
 	<!-- /.header-menu -->
 
@@ -77,7 +109,7 @@
 
 <div class="container">
 	<div class="bandeau-encart">
-		
+		<h1>Location de gîte et activités de loisir à Omaha Beach en Normandie</h1>
 	</div>
 	<!-- /.bandeau-encart -->
 </div>
