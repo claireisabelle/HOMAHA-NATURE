@@ -17,6 +17,7 @@
  	1 - GENERALITES
  	2 - HEADER
  	3 - BANDEAU
+ 	4 - ACCUEIL PARTICULARITES
  *************************************************
  */
 
@@ -175,4 +176,95 @@ body{
 	margin: 0;
 	padding: 0 10px;
 	line-height: 60px;
+}
+
+/*
+ *************************************************
+ 	4 - ACCUEIL PARTICULARITES
+ *************************************************
+ */
+
+.home-teasing h2{
+	text-align: center;
+	font-style: italic;
+	color: $brun;
+	margin: 0;
+	padding: 15px 30px;
+	font-size: 1.5rem;
+	line-height: 2.2rem;
+}
+
+.home-prestations{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.home-prestations-encart{
+	width: 400px;
+	margin: 10px 10px 40px 10px;
+}
+
+@media screen and (min-width: 765px) and (max-width: 990px){
+	.home-prestations-encart{
+		width: 300px;
+	}
+}
+
+@media screen and(min-width: 1400px){
+	.home-prestations-encart{
+		width: 500px;
+	}
+}
+
+.home-prestations-encart-img{
+	position: relative;
+}
+
+.home-prestations-encart-img img{
+	position: relative;
+	width: 100%;
+	height: auto;
+	border: solid 5px #fff;
+	box-shadow: 0px 0px 2px #000;
+	z-index: 20;
+}
+
+.shadow{
+	position: absolute;
+	width: 60%;
+	height: 100%;
+	bottom: -4px;
+	margin-left: 20%;
+	z-index: 1;
+	background-image:radial-gradient(black, transparent);
+}
+
+.home-prestations-encart-texte h3{
+	text-transform: uppercase;
+	color: $brun;
+	padding: 20px 0 5px 0;
+	font-weight: bold;
+	font-size: 1.4rem;
+	letter-spacing: 1px;
+}
+
+.home-prestations-encart-texte p{
+	color: #555555;
+	line-height: 1.8rem;
+}
+
+.home-prestations-encart-btn{
+	margin-top: 30px;
+}
+
+.home-prestations-encart-btn a{
+	padding: 7px 25px;
+	color: #fff;
+	background-color: $vert;
+}
+
+.home-prestations-encart-btn a:hover{
+	text-decoration: none;
+	background-color: $brun;
 }

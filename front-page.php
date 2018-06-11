@@ -52,26 +52,6 @@
 				) );
 			?>
 
-<!-- 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav">
-					<li>
-						<a class="nav-link" href="#">Gîte</a>
-					</li>
-					<li>
-						<a class="nav-link" href="#">Activités</a>
-					</li>
-					<li>
-						<a class="nav-link" href="#">A Proximité</a>
-					</li>
-					<li>
-						<a class="nav-link" href="#">Tarifs</a>
-					</li>
-					<li>
-						<a class="nav-link" href="#">Réservations</a>
-					</li>
-
-				</ul>
-			</div> -->
 		</nav>
 
 	</div>
@@ -112,6 +92,91 @@
 		<h1>Location de gîte et activités de loisir à Omaha Beach en Normandie</h1>
 	</div>
 	<!-- /.bandeau-encart -->
+
+	<div class="home-teasing">
+		<h2>Libérez votre esprit le temps d'un séjour dans notre gîte en bord de mer et oxygénez-vous avec nos différentes activités</h2>
+	</div>
+	<!-- /.home-teasing -->
+
+	<div class="home-prestations">
+
+		<div class="home-prestations-encart">
+			<div class="home-prestations-encart-img">
+				<img class="d-block w-100" src="<?php bloginfo('template_url'); ?>/img/activite-01.jpg" alt="">
+				<div class="shadow"></div>
+			</div>
+			<!-- /.home-prestation-encart-img -->
+			<div class="home-prestations-encart-texte">
+				<h3>Gîte Rural</h3>
+				<p>Ressourcez-vous dans notre gîte entièrement équipé, accueillant 5 à 8 personnes, idéal, pour les séjours en famille ou entre amis.</p>
+			</div>
+			<!-- /.home-prestations-encart-texte -->
+			<div class="home-prestations-encart-btn">
+				<a href="">Découvrir le gîte</a>
+			</div>
+			<!-- /.home-prestations-encart-btn -->
+
+		</div>
+		<!-- /.home-prestations-encart -->
+
+
+		<div class="home-prestations-encart">
+			<div class="home-prestations-encart-img">
+				<img class="d-block w-100" src="<?php bloginfo('template_url'); ?>/img/activite-02.jpg" alt="">
+				<div class="shadow"></div>
+			</div>
+			<!-- /.home-prestation-encart-img -->
+			<div class="home-prestations-encart-texte">
+				<h3>Activités sportives et de nature</h3>
+				<p>Au départ du gîte, nous vous proposons plusieurs activités : marche nordique, randonnée, longe côte, land art...</p>
+			</div>
+			<!-- /.home-prestations-encart-texte -->
+			<div class="home-prestations-encart-btn">
+				<a href="">Découvrir nos activités</a>
+			</div>
+			<!-- /.home-prestations-encart-btn -->
+		</div>
+		<!-- /.home-prestations-encart -->
+
+		<div class="home-prestations-encart">
+			<div class="home-prestations-encart-img">
+				<img class="d-block w-100" src="<?php bloginfo('template_url'); ?>/img/activite-02.jpg" alt="">
+				<div class="shadow"></div>
+			</div>
+			<!-- /.home-prestation-encart-img -->
+			<div class="home-prestations-encart-texte">
+				<h3>Gîte Rural</h3>
+				<p>Ressourcez-vous dans notre gîte entièrement équipé, accueillant 5 à 8 personnes, idéal, pour les séjours en famille ou entre amis</p>
+			</div>
+			<!-- /.home-prestations-encart-texte -->
+			<div class="home-prestations-encart-btn">
+				<a href="">Découvrir le gîte</a>
+			</div>
+			<!-- /.home-prestations-encart-btn -->
+		</div>
+		<!-- /.home-prestations-encart -->
+
+		<div class="home-prestations-encart">
+			<div class="home-prestations-encart-img">
+				<img class="d-block w-100" src="<?php bloginfo('template_url'); ?>/img/activite-02.jpg" alt="">
+				<div class="shadow"></div>
+			</div>
+			<!-- /.home-prestation-encart-img -->
+			<div class="home-prestations-encart-texte">
+				<h3>Gîte Rural</h3>
+				<p>Ressourcez-vous dans notre gîte entièrement équipé, accueillant 5 à 8 personnes, idéal, pour les séjours en famille ou entre amis</p>
+			</div>
+			<!-- /.home-prestations-encart-texte -->
+			<div class="home-prestations-encart-btn">
+				<a href="">Découvrir le gîte</a>
+			</div>
+			<!-- /.home-prestations-encart-btn -->
+		</div>
+		<!-- /.home-prestations-encart -->
+
+
+	</div>
+	<!-- /.home-prestations -->
 </div>
 <!-- /.container -->
 
