@@ -13,14 +13,12 @@
 	<div class="header-top">
 		<div class="container">
 			<nav class="header-top-menu">
-				<ul>
-					<li><a href="">English</a></li>
-					<li>|</li>
-					<li><a href="">Qui sommes-nous ?</a></li>
-					<li><a href="">Avis</a></li>
-					<li><a href="">Contact</a></li>
-
-				</ul>
+				<?php
+					wp_nav_menu( array(
+						'theme_location'    => 'header',
+						'depth'             => 1
+					) );
+				?>
 			</nav>
 		</div>
 		<!-- /.container -->
@@ -138,47 +136,69 @@
 		</div>
 		<!-- /.home-prestations-encart -->
 
-		<div class="home-prestations-encart">
-			<div class="home-prestations-encart-img">
-				<img class="d-block w-100" src="<?php bloginfo('template_url'); ?>/img/activite-02.jpg" alt="">
-				<div class="shadow"></div>
-			</div>
-			<!-- /.home-prestation-encart-img -->
-			<div class="home-prestations-encart-texte">
-				<h3>Gîte Rural</h3>
-				<p>Ressourcez-vous dans notre gîte entièrement équipé, accueillant 5 à 8 personnes, idéal, pour les séjours en famille ou entre amis</p>
-			</div>
-			<!-- /.home-prestations-encart-texte -->
-			<div class="home-prestations-encart-btn">
-				<a href="">Découvrir le gîte</a>
-			</div>
-			<!-- /.home-prestations-encart-btn -->
-		</div>
-		<!-- /.home-prestations-encart -->
-
-		<div class="home-prestations-encart">
-			<div class="home-prestations-encart-img">
-				<img class="d-block w-100" src="<?php bloginfo('template_url'); ?>/img/activite-02.jpg" alt="">
-				<div class="shadow"></div>
-			</div>
-			<!-- /.home-prestation-encart-img -->
-			<div class="home-prestations-encart-texte">
-				<h3>Gîte Rural</h3>
-				<p>Ressourcez-vous dans notre gîte entièrement équipé, accueillant 5 à 8 personnes, idéal, pour les séjours en famille ou entre amis</p>
-			</div>
-			<!-- /.home-prestations-encart-texte -->
-			<div class="home-prestations-encart-btn">
-				<a href="">Découvrir le gîte</a>
-			</div>
-			<!-- /.home-prestations-encart-btn -->
-		</div>
-		<!-- /.home-prestations-encart -->
-
-
 	</div>
 	<!-- /.home-prestations -->
+
+	<div class="home-texte">
+		<?php while(have_posts()): the_post(); ?>
+			<?php the_content(); ?>
+		<?php endwhile; ?>
+	</div>
+	<!-- /.home-texte -->
+
 </div>
 <!-- /.container -->
+
+<footer>
+	<div class="footer-quote">
+		<div class="container">
+			<p>"Citation inspirante ou témoignage d'un client ici"</p>
+			<p class="auteur">Nom Prénom</p>
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.footer-quote -->
+
+	<div class="footer-01">
+		<div class="container">
+			<div class="footer-01-content">
+				<div class="footer-01-content-menu">
+					<?php
+						wp_nav_menu( array(
+							'theme_location'    => 'footer1',
+							'depth'             => 1
+						) );
+					?>
+				</div>
+				<!-- /.footer-01-content-menu -->
+				<div class="footer-01-content-coordonnees">
+					<p>75, route d'Omaha Beach<br />
+					14520 Sainte-Honorine-des-Pertes</p>
+					<p>06 21 31 50 79</p>
+					<p><a href="mailto:anneingridlg@gmail.com">anneingridlg@gmail.com</a></p>
+				</div>
+				<!-- /.footer-01-content-coordonnees -->
+			</div>
+			<!-- /.footer-01-content -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.footer-01 -->
+
+	<div class="footer-02">
+		<div class="container">
+			<?php
+				wp_nav_menu( array(
+					'theme_location'    => 'footer2',
+					'depth'             => 1
+				) );
+			?>
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.footer-02 -->
+
+</footer>
 
 
 

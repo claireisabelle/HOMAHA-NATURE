@@ -18,8 +18,11 @@
  	2 - HEADER
  	3 - BANDEAU
  	4 - ACCUEIL PARTICULARITES
+ 	5 - FOOTER
  *************************************************
  */
+
+
 
 
 
@@ -30,8 +33,10 @@
  */
 $brun: #a58c6e;
 $brun_clair: #c8b298;
+$brun_fonce: #684c2b;
 $vert: #518e8c;
 $vert_fonce: #004e4e;
+$gris: #555555;
 
 $raleway: 'Raleway', sans-serif;
 $kalam: 'Kalam', cursive;
@@ -45,6 +50,9 @@ body{
 	font-family: $raleway;
 	font-size: 16px;
 }
+
+
+
 
 
 /*
@@ -69,13 +77,23 @@ body{
 	font-size: 0.7rem;
 }
 
-.header-top-menu li{
+.header-top-menu ul li{
 	display: inline-block;
+	padding-left: 15px;
+}
+
+.header-top-menu ul li:first-child:after{
+	content: "|";
 	padding-left: 15px;
 }
 
 .header-top-menu a{
 	color: #fff;
+}
+
+.header-top-menu a:hover{
+	text-decoration: none;
+	color: $brun_fonce;
 }
 
 .header-logo{
@@ -134,6 +152,9 @@ body{
 }
 
 
+
+
+
 /*
  *************************************************
  	3 - BANDEAU
@@ -178,6 +199,10 @@ body{
 	line-height: 60px;
 }
 
+
+
+
+
 /*
  *************************************************
  	4 - ACCUEIL PARTICULARITES
@@ -197,12 +222,12 @@ body{
 .home-prestations{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 }
 
 .home-prestations-encart{
 	width: 400px;
-	margin: 10px 10px 40px 10px;
+	margin: 10px 0 40px 0;
 }
 
 @media screen and (min-width: 765px) and (max-width: 990px){
@@ -250,7 +275,7 @@ body{
 }
 
 .home-prestations-encart-texte p{
-	color: #555555;
+	color: $gris;
 	line-height: 1.8rem;
 }
 
@@ -267,4 +292,128 @@ body{
 .home-prestations-encart-btn a:hover{
 	text-decoration: none;
 	background-color: $brun;
+}
+
+.home-texte{
+	margin-top: 20px;
+}
+
+.home-texte p{
+	color: $gris;
+	line-height: 2rem;
+	font-size: 1.2rem;
+}
+
+
+
+
+
+/*
+ *************************************************
+ 	5 - FOOTER
+ *************************************************
+ */
+
+.footer-quote{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 100%;
+	min-height: 135px;
+	height: auto;
+	background-color: $brun_clair;
+}
+
+.footer-quote p{
+	color: $brun_fonce;
+	font-weight: bold;
+	font-family: 'Segoe';
+	text-align: center;
+	font-size: 1.6rem;
+	padding: 20px 5px 10px 5px;
+	margin: 0;
+}
+
+.footer-quote p.auteur{
+	color: rgba(255,255,255,0.6);
+	padding-top: 0px;
+	font-family: $raleway;
+	text-align: right;
+}
+
+.footer-quote p.auteur:before{
+	content: "—";
+	padding-right: 10px;
+}
+
+.footer-01{
+	width: 100%;
+	padding: 30px 10px 30px 10px;
+	background-color: $vert;
+}
+
+.footer-01-content{
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+}
+
+.footer-01-content-menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-01-content-menu ul li {
+	color: #fff;
+	line-height: 2rem;
+}
+
+.footer-01-content-menu ul li a{
+	color: #fff;
+}
+
+.footer-01-content-menu ul li a:hover{
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.footer-01-content-coordonnees a{
+	color: #fff;
+}
+
+.footer-01-content-coordonnees a:hover{
+	text-decoration: none;
+}
+
+.footer-02{
+	width: 100%;
+	min-height: 20px;
+	background-color: $vert_fonce;
+}
+
+.footer-02 ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.footer-02 ul li{
+	display: inline-block;
+	color: rgba(255,255,255,0.7);
+	padding: 5px;
+}
+
+.footer-02 ul li a{
+	color: rgba(255,255,255,0.7);
+}
+
+.footer-02 ul li:after{
+	content: "-";
+	padding-left: 10px;
+}
+
+.footer-02 ul li:last-child:after{
+	content: "";
+	padding-left: 0px;
 }

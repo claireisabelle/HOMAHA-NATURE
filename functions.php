@@ -62,6 +62,20 @@ function hom_setup(){
 	register_nav_menus( array(
 		'primary' => __( 'Menu principal', 'homahanature' ),
 	) );
+
+	// Footer menu
+	register_nav_menus( array(
+		'footer1' => __( 'Menu pied de page 1', 'homahanature' ),
+	) );
+
+	register_nav_menus( array(
+		'footer2' => __( 'Menu pied de page 2', 'homahanature' ),
+	) );
+
+	// Header menu
+	register_nav_menus( array(
+		'header' => __( 'Menu en-tête', 'homahanature' ),
+	) );
 }
 add_action('after_setup_theme', 'hom_setup');
 
