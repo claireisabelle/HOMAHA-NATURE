@@ -7,6 +7,7 @@
  * CSS AND JS SCRIPTS................ Déclaration des fichiers .css et .js
  * SET UP THEME ..................... Taille des images et thumbnails, déclaration du menu
  * NAVWALKER ........................ Inclusion de navwalker pour le menu Bootstrap
+ * CUSTOMIZER ....................... Inclusion des fichiers customizer
  */
 
 
@@ -95,3 +96,14 @@ if ( ! file_exists( get_template_directory() . '/inc/navwalker/class-wp-bootstra
 	// file exists... require it.
     require_once get_template_directory() . '/inc/navwalker/class-wp-bootstrap-navwalker.php';
 }
+
+
+
+
+
+/*
+ ***********************************************
+	CUSTOMIZER
+ ***********************************************
+ */
+require get_stylesheet_directory().'/inc/customizer/customizer-footer.php';

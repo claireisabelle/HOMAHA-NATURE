@@ -273,12 +273,13 @@ body {
 
 .footer-01-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   color: #fff; }
 
 .footer-01-content-menu ul {
   list-style: none;
-  margin: 0;
+  margin: 0 0 20px 0;
   padding: 0; }
 
 .footer-01-content-menu ul li {
@@ -297,6 +298,9 @@ body {
 
 .footer-01-content-coordonnees a:hover {
   text-decoration: none; }
+
+.footer-01-content-coordonnees img {
+  max-width: 100%; }
 
 .footer-02 {
   width: 100%;
