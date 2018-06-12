@@ -73,6 +73,12 @@ body {
   color: #a58c6e;
   font-size: 2rem; }
 
+.header-logo a {
+  color: #a58c6e; }
+
+.header-logo a:hover {
+  text-decoration: none; }
+
 .logo-part2 {
   font-family: 'Segoe'; }
 

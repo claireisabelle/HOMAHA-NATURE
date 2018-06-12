@@ -103,6 +103,14 @@ body{
 	font-size: 2rem;
 }
 
+.header-logo a{
+	color: $brun;
+}
+
+.header-logo a:hover{
+	text-decoration: none;
+}
+
 .logo-part2{
 	font-family: 'Segoe';
 }
