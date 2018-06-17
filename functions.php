@@ -8,6 +8,8 @@
  * SET UP THEME ..................... Taille des images et thumbnails, déclaration du menu
  * NAVWALKER ........................ Inclusion de navwalker pour le menu Bootstrap
  * CUSTOMIZER ....................... Inclusion des fichiers customizer
+ * TAXONOYM ......................... Taxonomies personnalisées
+ * CUSTOM POST TYPE CLUBS ........... Post de type "Prestations"
  */
 
 
@@ -110,3 +112,75 @@ if ( ! file_exists( get_template_directory() . '/inc/navwalker/class-wp-bootstra
  ***********************************************
  */
 require get_stylesheet_directory().'/inc/customizer/customizer-footer.php';
+
+
+
+
+
+/*
+ ***********************************************
+	TAXONOMY
+ ***********************************************
+ */
+function hom_taxonomy_affichage_prestation() {
+	register_taxonomy(
+		'emplacement',
+		'book',
+		array(
+			'label' => __( 'Emplacement' ),
+			'rewrite' => array( 'slug' => 'emplacement' ),
+			'hierarchical' => true,
+		)
+	);
+}
+
+add_action( 'init', 'hom_taxonomy_affichage_prestation' );
+
+
+
+/*
+ ***********************************************
+	CUSTOM POST TYPE CLUBS
+ ***********************************************
+ */
+function hom_prestations(){
+
+	$labels = array(
+		'name'               => _x( 'Prestations', 'homahanature' ),
+		'singular_name'      => _x( 'Prestation', 'post type singular name', 'homahanature' ),
+		'menu_name'          => _x( 'Prestations', 'admin menu', 'homahanature' ),
+		'name_admin_bar'     => _x( 'Prestation', 'add new on admin bar', 'homahanature' ),
+		'add_new'            => _x( 'Ajouter une prestation', 'book', 'homahanature' ),
+		'add_new_item'       => __( 'Ajouter une nouvelle prestation', 'homahanature' ),
+		'new_item'           => __( 'Nouvelle prestation', 'homahanature' ),
+		'edit_item'          => __( 'Editer prestation', 'homahanature' ),
+		'view_item'          => __( 'Voir la prestation', 'homahanature' ),
+		'all_items'          => __( 'Toutes les prestations', 'homahanature' ),
+		'search_items'       => __( 'Recherche Prestation', 'homahanature' ),
+		'parent_item_colon'  => __( 'Parent Prestation :', 'homahanature' ),
+		'not_found'          => __( 'Aucun prestation trouvée.', 'homahanature' ),
+		'not_found_in_trash' => __( 'Aucune prestation dans la corbeille.', 'homahanature' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+    	'description'        => __( 'Les prestations', 'homahanature' ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'clubs' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'editor', 'thumbnail', 'author' ),
+		'menu_icon'			 => 'dashicons-id-alt',
+		'taxonomies'          => array( 'emplacement' ),
+	);
+
+	register_post_type( 'prestations', $args );
+}
+
+add_action( 'init', 'hom_prestations' );

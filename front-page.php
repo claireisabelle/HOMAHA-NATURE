@@ -63,7 +63,7 @@
 
 <div class="container">
 	<div class="bandeau-encart">
-		<h1><?php the_field('titre'); ?><</h1>
+		<h1><?php the_field('titre'); ?></h1>
 	</div>
 	<!-- /.bandeau-encart -->
 
@@ -76,43 +76,53 @@
 
 	<div class="home-prestations">
 
+		<?php
+			$args = array(
+				'post_type'			=> 'prestations',
+				'posts_per_page' 	=> -1,
+				'orderby'			=> 'date',
+				'order'				=> 'ASC',
+				'tax_query'			=> array(
+					array(
+						'taxonomy' => 'emplacement',            
+						'field' => 'slug',                
+						'terms' => array( 'accueil'),  
+					),
+				)
+			);
+
+			$prestations = new WP_Query($args);
+			while($prestations->have_posts()): $prestations->the_post();
+		?>
+
 		<div class="home-prestations-encart">
+
 			<div class="home-prestations-encart-img">
-				<img class="d-block w-100" src="<?php bloginfo('template_url'); ?>/img/activite-01.jpg" alt="">
+				<?php 
+					$illustration_id = get_field('illustration');
+					$size = "prestation"; 
+					$illustration = wp_get_attachment_image_src( $illustration_id, $size );
+
+				?>
+				<img class="d-block w-100" alt="" src="<?php echo $illustration[0]; ?>" />
 				<div class="shadow"></div>
 			</div>
 			<!-- /.home-prestation-encart-img -->
 			<div class="home-prestations-encart-texte">
-				<h3>Gîte Rural</h3>
-				<p>Ressourcez-vous dans notre gîte entièrement équipé, accueillant 5 à 8 personnes, idéal, pour les séjours en famille ou entre amis.</p>
+				<h3><?php the_title(); ?></h3>
+				<p><?php the_content(); ?></p>
 			</div>
 			<!-- /.home-prestations-encart-texte -->
 			<div class="home-prestations-encart-btn">
-				<a href="">Découvrir le gîte</a>
+				<a href="<?php the_field('lien_du_bouton'); ?>"><?php the_field('texte_bouton'); ?></a>
 			</div>
-			<!-- /.home-prestations-encart-btn -->
+			<!-- /.home-prestations-encart-btn -->		
 
 		</div>
 		<!-- /.home-prestations-encart -->
 
+		<?php endwhile; wp_reset_postdata(); ?>
 
-		<div class="home-prestations-encart">
-			<div class="home-prestations-encart-img">
-				<img class="d-block w-100" src="<?php bloginfo('template_url'); ?>/img/activite-02.jpg" alt="">
-				<div class="shadow"></div>
-			</div>
-			<!-- /.home-prestation-encart-img -->
-			<div class="home-prestations-encart-texte">
-				<h3>Activités sportives et de nature</h3>
-				<p>Au départ du gîte, nous vous proposons plusieurs activités : marche nordique, randonnée, longe côte, land art...</p>
-			</div>
-			<!-- /.home-prestations-encart-texte -->
-			<div class="home-prestations-encart-btn">
-				<a href="">Découvrir nos activités</a>
-			</div>
-			<!-- /.home-prestations-encart-btn -->
-		</div>
-		<!-- /.home-prestations-encart -->
 
 	</div>
 	<!-- /.home-prestations -->
