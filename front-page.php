@@ -1,20 +1,49 @@
 <?php get_header(); ?>
+	
+	<?php while(have_posts()): the_post(); ?>
 
-	<title>H'Omaha Nature</title>
+		<title><?php the_field('titre_seo'); ?></title>
+		<meta name="description" content="<?php the_field('description_seo'); ?><" />
+		<meta>
+
+	<?php endwhile; ?>
 	
 <?php get_template_part('header2'); ?>
+
+<?php while(have_posts()): the_post(); ?>
 
 <div class="bandeau">
 	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="d-block w-100" src="<?php bloginfo('template_url'); ?>/img/bandeau.jpg" alt="First slide">
+				<?php 
+					$bandeau1_id = get_field('bandeau1');
+					$size = "panoramique"; 
+					$image1 = wp_get_attachment_image_src( $bandeau1_id, $size );
+
+				?>
+				<img class="d-block w-100" alt="" src="<?php echo $image1[0]; ?>" />
+
 			</div>
+
 			<div class="carousel-item">
-				<img class="d-block w-100" src="<?php bloginfo('template_url'); ?>/img/bandeau.jpg" alt="Second slide">
+				<?php 
+					$bandeau2_id = get_field('bandeau2');
+					$size = "panoramique"; 
+					$image2 = wp_get_attachment_image_src( $bandeau2_id, $size );
+
+				?>
+				<img class="d-block w-100" alt="" src="<?php echo $image2[0]; ?>" />
 			</div>
+
 			<div class="carousel-item">
-				<img class="d-block w-100" src="<?php bloginfo('template_url'); ?>/img/bandeau.jpg" alt="Third slide">
+				<?php 
+					$bandeau3_id = get_field('bandeau3');
+					$size = "panoramique"; 
+					$image3 = wp_get_attachment_image_src( $bandeau3_id, $size );
+
+				?>
+				<img class="d-block w-100" alt="" src="<?php echo $image3[0]; ?>" />
 			</div>
 		</div>
 
@@ -34,14 +63,16 @@
 
 <div class="container">
 	<div class="bandeau-encart">
-		<h1>Location de gîte et activités de loisir à Omaha Beach en Normandie</h1>
+		<h1><?php the_field('titre'); ?><</h1>
 	</div>
 	<!-- /.bandeau-encart -->
 
 	<div class="home-teasing">
-		<h2>Libérez votre esprit le temps d'un séjour dans notre gîte en bord de mer et oxygénez-vous avec nos différentes activités</h2>
+		<h2><?php the_field('teaser'); ?></h2>
 	</div>
 	<!-- /.home-teasing -->
+
+<?php endwhile; ?>
 
 	<div class="home-prestations">
 

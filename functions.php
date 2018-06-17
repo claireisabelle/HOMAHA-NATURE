@@ -58,6 +58,9 @@ add_action('wp_enqueue_scripts', 'hom_styles');
 function hom_setup(){
 	add_theme_support('post-thumbnails');
 
+	add_image_size('panoramique', 1600, 550, true);
+	add_image_size('prestation', 400, 200, true);
+
 
 	// Menu Main
 	register_nav_menus( array(
