@@ -17,6 +17,7 @@ Fontawesome
 Custom Advanced Fields
 Fluidbox
 jQuery
+NextGen Gallery
 ```
 
 
