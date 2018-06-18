@@ -380,4 +380,24 @@ h4 {
   padding: 0 10px;
   line-height: 60px; }
 
+/*
+ *************************************************
+ 	7 - PAGE ACTIVITE SOLO
+ *************************************************
+ */
+.page-activite-deroulement {
+  margin: 40px;
+  background-color: #eeeeee;
+  padding: 20px;
+  display: flex; }
+
+.page-activite-deroulement-texte {
+  padding-right: 10px;
+  color: #555555; }
+
+@media screen and (max-width: 600px) {
+  .page-activite-deroulement {
+    flex-wrap: wrap;
+    justify-content: center; } }
+
 /*# sourceMappingURL=style.css.map */

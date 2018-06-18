@@ -62,6 +62,8 @@ function hom_setup(){
 
 	add_image_size('panoramique', 1600, 550, true);
 	add_image_size('prestation', 400, 200, true);
+	add_image_size('carre-250', 250, 250, true);
+
 
 
 	// Menu Main

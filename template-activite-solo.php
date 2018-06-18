@@ -84,7 +84,13 @@
 			<!-- /.page-activite-deroulement-texte -->
 			
 			<div class="page-activite-deroulement-image">
-				<?php the_field('deroulement_image'); ?>
+				<?php 
+					$deroulement_image_id = get_field('deroulement_image');
+					$size = "carre-250"; 
+					$deroulement_image = wp_get_attachment_image_src( $deroulement_image_id, $size );
+
+				?>
+				<img alt="" src="<?php echo $deroulement_image[0]; ?>" />
 			</div>
 			<!-- /.page-activite-deroulement-image -->
 

@@ -38,6 +38,7 @@ $brun_fonce: #684c2b;
 $vert: #518e8c;
 $vert_fonce: #004e4e;
 $gris: #555555;
+$gris_clair: #eeeeee;
 
 $raleway: 'Raleway', sans-serif;
 $kalam: 'Kalam', cursive;
@@ -489,4 +490,33 @@ h4{
 	margin: 0;
 	padding: 0 10px;
 	line-height: 60px;
+}
+
+
+
+
+
+/*
+ *************************************************
+ 	7 - PAGE ACTIVITE SOLO
+ *************************************************
+ */
+
+.page-activite-deroulement{
+	margin: 40px;
+	background-color: $gris_clair;
+	padding: 20px;
+	display: flex;
+}
+
+.page-activite-deroulement-texte{
+	padding-right: 10px;
+	color: $gris;
+}
+
+@media screen and (max-width: 600px){
+	.page-activite-deroulement{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
