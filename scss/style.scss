@@ -19,6 +19,7 @@
  	3 - BANDEAU
  	4 - ACCUEIL PARTICULARITES
  	5 - FOOTER
+ 	6 - PAGE INTERNE
  *************************************************
  */
 
@@ -51,6 +52,26 @@ body{
 	font-size: 16px;
 }
 
+h2{
+	font-size: 1.7rem;
+	color: $brun;
+	padding: 40px 0 15px 0;
+	font-weight: bold;
+}
+
+h3{
+	font-size: 1.40rem;
+	color: $vert;
+	padding: 15px 0;
+	font-weight: bold;
+}
+
+h4{
+	font-size: 1.2rem;
+	color: #000;
+	padding: 8px 0;
+	font-weight: bold;
+}
 
 
 
@@ -225,6 +246,7 @@ body{
 	padding: 15px 30px;
 	font-size: 1.5rem;
 	line-height: 2.2rem;
+	font-weight: normal;
 }
 
 .home-prestations{
@@ -326,7 +348,7 @@ body{
 	margin-top: 50px;
 	margin-bottom: 50px;
 	width: 100%;
-	min-height: 135px;
+	min-height: 120px;
 	height: auto;
 	background-color: $brun_clair;
 }
@@ -336,7 +358,7 @@ body{
 	font-weight: bold;
 	font-family: 'Segoe';
 	text-align: center;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	padding: 20px 5px 10px 5px;
 	margin: 0;
 }
@@ -429,4 +451,42 @@ body{
 .footer-02 ul li:last-child:after{
 	content: "";
 	padding-left: 0px;
+}
+
+
+
+
+/*
+ *************************************************
+ 	6 - PAGE INTERNE
+ *************************************************
+ */
+.page-interne{
+	margin-top: 20px;
+}
+
+.page-interne p{
+	color: $gris;
+	line-height: 2rem;
+	font-size: 1.2rem;
+}
+
+.bandeau-encart-interne{
+	position: relative;
+	width: 100%;
+	min-height: 60px;
+	background-color: $brun;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	z-index: 10;
+}
+
+.bandeau-encart-interne h1{
+	text-align: center;
+	font-weight: none;
+	font-size: 1.5rem;
+	color: #fff;
+	margin: 0;
+	padding: 0 10px;
+	line-height: 60px;
 }
