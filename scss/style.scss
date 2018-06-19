@@ -20,6 +20,8 @@
  	4 - ACCUEIL PARTICULARITES
  	5 - FOOTER
  	6 - PAGE INTERNE
+ 	7 - PAGE ACTIVITE SOLO
+ 	8 - PAGE GITE
  *************************************************
  */
 
@@ -356,8 +358,9 @@ h4{
 
 .footer-quote p{
 	color: $brun_fonce;
-	font-weight: bold;
-	font-family: 'Segoe';
+	font-weight: normal;
+	font-family: $raleway;
+	font-style: italic;
 	text-align: center;
 	font-size: 1.4rem;
 	padding: 20px 5px 10px 5px;
@@ -369,6 +372,7 @@ h4{
 	padding-top: 0px;
 	font-family: $raleway;
 	text-align: right;
+	font-style: normal;
 }
 
 .footer-quote p.auteur:before{
@@ -519,4 +523,60 @@ h4{
 		flex-wrap: wrap;
 		justify-content: center;
 	}
+}
+
+
+
+
+
+/*
+ *************************************************
+ 	8 - PAGE GITE
+ *************************************************
+ */
+.gite-infos-cles{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.info-cle{
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	background-color: $vert;
+	color: #fff;
+	text-align: center;
+	min-width: 150px;
+}
+
+.info-cle a{
+	color: #fff;
+}
+
+.info-cle a:hover{
+	text-decoration: none;
+}
+
+.info-cle .fa{
+	margin-right: 10px;
+}
+
+.reservation a{
+	margin-top: 30px;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	background-color: $gris;
+	color: #fff; 
+}
+
+.reservation a:hover{
+	text-decoration: none;
+	background-color: $vert;
+}
+
+.reservation a .fa{
+	margin-right: 10px;
 }

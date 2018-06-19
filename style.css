@@ -20,6 +20,8 @@
  	4 - ACCUEIL PARTICULARITES
  	5 - FOOTER
  	6 - PAGE INTERNE
+ 	7 - PAGE ACTIVITE SOLO
+ 	8 - PAGE GITE
  *************************************************
  */
 /*
@@ -269,8 +271,9 @@ h4 {
 
 .footer-quote p {
   color: #684c2b;
-  font-weight: bold;
-  font-family: 'Segoe';
+  font-weight: normal;
+  font-family: "Raleway", sans-serif;
+  font-style: italic;
   text-align: center;
   font-size: 1.4rem;
   padding: 20px 5px 10px 5px;
@@ -280,7 +283,8 @@ h4 {
   color: rgba(255, 255, 255, 0.6);
   padding-top: 0px;
   font-family: "Raleway", sans-serif;
-  text-align: right; }
+  text-align: right;
+  font-style: normal; }
 
 .footer-quote p.auteur:before {
   content: "—";
@@ -399,5 +403,48 @@ h4 {
   .page-activite-deroulement {
     flex-wrap: wrap;
     justify-content: center; } }
+/*
+ *************************************************
+ 	8 - PAGE GITE
+ *************************************************
+ */
+.gite-infos-cles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.info-cle {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #518e8c;
+  color: #fff;
+  text-align: center;
+  min-width: 150px; }
+
+.info-cle a {
+  color: #fff; }
+
+.info-cle a:hover {
+  text-decoration: none; }
+
+.info-cle .fa {
+  margin-right: 10px; }
+
+.reservation a {
+  margin-top: 30px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #555555;
+  color: #fff; }
+
+.reservation a:hover {
+  text-decoration: none;
+  background-color: #518e8c; }
+
+.reservation a .fa {
+  margin-right: 10px; }
 
 /*# sourceMappingURL=style.css.map */

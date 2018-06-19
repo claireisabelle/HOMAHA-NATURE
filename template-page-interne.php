@@ -33,15 +33,4 @@
 <?php endwhile; ?>
 
 
-
-<div class="footer-quote">
-	<div class="container">
-		<p>"Citation inspirante ou témoignage d'un client ici"</p>
-		<p class="auteur">Nom Prénom</p>
-	</div>
-	<!-- /.container -->
-</div>
-<!-- /.footer-quote -->
-
-
 <?php get_footer(); ?>
