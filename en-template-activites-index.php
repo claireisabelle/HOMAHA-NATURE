@@ -1,3 +1,9 @@
+<?php
+/*
+ * Template Name: EN Page Activités Générales
+ */
+?>
+
 <?php get_header(); ?>
 	
 	<?php while(have_posts()): the_post(); ?>
@@ -7,26 +13,27 @@
 
 	<?php endwhile; ?>
 	
-<?php get_template_part('header2'); ?>
+<?php get_template_part('en-header2'); ?>
+
 
 <?php while(have_posts()): the_post(); ?>
 
-<?php get_template_part('inc-caroussel'); ?>	
+	<div class="container">
+		<div class="bandeau-encart-interne">
+			<h1><?php the_field('titre'); ?></h1>
+		</div>
 
-<div class="container">
-	<div class="bandeau-encart">
-		<h1><?php the_field('titre'); ?></h1>
-	</div>
-	<!-- /.bandeau-encart -->
+		<div class="home-teasing">
+			<h2><?php the_field('teaser'); ?></h2>
+		</div>
+		<!-- /.home-teasing -->
 
-	<div class="home-teasing">
-		<h2><?php the_field('teaser'); ?></h2>
-	</div>
-	<!-- /.home-teasing -->
+		<div class="home-texte">
+			<?php the_content(); ?>
+		</div>
+		<!-- /.home-texte -->
 
-<?php endwhile; ?>
-
-	<div class="home-prestations">
+		<div class="home-prestations">
 
 		<?php
 			$args = array(
@@ -38,7 +45,7 @@
 					array(
 						'taxonomy' => 'emplacement',            
 						'field' => 'slug',                
-						'terms' => array( 'accueil'),  
+						'terms' => array( 'activites-anglais'),  
 					),
 				)
 			);
@@ -78,17 +85,11 @@
 
 	</div>
 	<!-- /.home-prestations -->
-
-	<div class="home-texte">
-		<?php while(have_posts()): the_post(); ?>
-			<?php the_content(); ?>
-		<?php endwhile; ?>
 	</div>
-	<!-- /.home-texte -->
+	<!-- /.container -->
 
-</div>
-<!-- /.container -->
-
+<?php endwhile; ?>
 
 
-<?php get_footer(); ?>
+
+<?php get_footer('en'); ?>

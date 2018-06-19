@@ -1,3 +1,9 @@
+<?php
+/*
+ * Template Name: EN Page Accueil
+ */
+?>
+
 <?php get_header(); ?>
 	
 	<?php while(have_posts()): the_post(); ?>
@@ -7,7 +13,7 @@
 
 	<?php endwhile; ?>
 	
-<?php get_template_part('header2'); ?>
+<?php get_template_part('en-header2'); ?>
 
 <?php while(have_posts()): the_post(); ?>
 
@@ -38,7 +44,7 @@
 					array(
 						'taxonomy' => 'emplacement',            
 						'field' => 'slug',                
-						'terms' => array( 'accueil'),  
+						'terms' => array( 'accueil-anglais'),  
 					),
 				)
 			);
@@ -91,4 +97,4 @@
 
 
 
-<?php get_footer(); ?>
+<?php get_footer('en'); ?>

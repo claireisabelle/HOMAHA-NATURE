@@ -65,17 +65,19 @@ function hom_setup(){
 	add_image_size('carre-250', 250, 250, true);
 
 
+	// MENUS FRANCAIS
 
 	// Menu Main
 	register_nav_menus( array(
 		'primary' => __( 'Menu principal', 'homahanature' ),
 	) );
 
-	// Footer menu
+	// Footer 1 menu
 	register_nav_menus( array(
 		'footer1' => __( 'Menu pied de page 1', 'homahanature' ),
 	) );
 
+	// Footer 2 menu
 	register_nav_menus( array(
 		'footer2' => __( 'Menu pied de page 2', 'homahanature' ),
 	) );
@@ -83,6 +85,30 @@ function hom_setup(){
 	// Header menu
 	register_nav_menus( array(
 		'header' => __( 'Menu en-tête', 'homahanature' ),
+	) );
+
+
+
+	// MENUS ANGLAIS
+
+	// Menu Main
+	register_nav_menus( array(
+		'primary-en' => __( 'Menu principal anglais', 'homahanature' ),
+	) );
+
+	// Footer 1 menu
+	register_nav_menus( array(
+		'footer1-en' => __( 'Menu pied de page 1 anglais', 'homahanature' ),
+	) );
+
+	// Footer 2 menu
+	register_nav_menus( array(
+		'footer2-en' => __( 'Menu pied de page 2 anglais', 'homahanature' ),
+	) );
+
+	// Header menu
+	register_nav_menus( array(
+		'header-en' => __( 'Menu en-tête anglais', 'homahanature' ),
 	) );
 }
 add_action('after_setup_theme', 'hom_setup');
